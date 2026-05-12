@@ -1,0 +1,149 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(circle at 20% 0%, #30103d, #0d0f1f 45%, #06070f);
+  color: #f4f7ff;
+}
+
+.page {
+  width: min(1080px, 92vw);
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  background: linear-gradient(120deg, rgba(255, 77, 109, 0.22), rgba(113, 72, 255, 0.2));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  right: -90px;
+  top: -90px;
+  background: radial-gradient(circle, rgba(255, 88, 119, 0.8), rgba(113, 72, 255, 0));
+  filter: blur(14px);
+  animation: drift 4.5s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(12px); }
+}
+
+.tag {
+  color: #ffa7b8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0.3rem 0 0.6rem;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.subtitle {
+  max-width: 720px;
+  color: #d6d9ea;
+}
+
+.panel {
+  margin-top: 1rem;
+  padding: 1.3rem;
+  border-radius: 18px;
+  background: rgba(16, 19, 39, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.7rem 0 1rem;
+}
+
+button {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.03);
+  color: #f4f7ff;
+  padding: 0.62rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: rgba(255, 166, 180, 0.8);
+}
+
+button.selected {
+  background: linear-gradient(120deg, #ff4d6d, #7148ff);
+  border-color: transparent;
+}
+
+.cta {
+  margin-top: 0.5rem;
+  background: linear-gradient(120deg, #ff4d6d, #a34dff);
+  border: 0;
+  font-weight: 700;
+}
+
+.strategy {
+  margin-top: 1rem;
+  line-height: 1.45;
+}
+
+.brain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.2rem 1rem;
+}
+
+.shield {
+  margin-top: 0.7rem;
+  color: #ffc5d1;
+}
+
+.feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.7rem;
+}
+
+.feed-card {
+  padding: 0.9rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feed-card p {
+  margin: 0.3rem 0;
+  color: #d1d5e6;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.status {
+  margin-top: 1rem;
+  opacity: 0.85;
+}
